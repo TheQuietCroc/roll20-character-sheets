@@ -3262,7 +3262,7 @@
 							<span class="sheet-table-header">Misc</span>
 						</div>
 						<div class="sheet-table-row">
-							<span class="sheet-table-data sheet-center"><button style="font-size:100%;" title="%{selected|Concentration-Check-0}" type="roll" value="&{template:pf_check} {{name=Concentration Check}} {{caster_class=@{spellclass-0-name} [[@{spellclass-0-level}]] }} {{concentration_chk=[[1d20 + @{Concentration-0}]] }}">Concentration</button></span>
+							<span class="sheet-table-data sheet-center"><button style="font-size:100%;" title="%{selected|Concentration-Check-0}" type="roll" name="attr_Concentration-0" value="&{template:pf_check} {{name=Concentration Check}} {{caster_class=@{spellclass-0-name} [[@{spellclass-0-level}]] }} {{concentration_chk=[[1d20 + @{Concentration-0}]] }}">Concentration</button></span>
 							<span class="sheet-table-data sheet-center"><input title="@{Concentration-0}" type="number" name="attr_Concentration-0" value="(@{spellclass-0-level} + @{Concentration-0-ability} + @{Concentration-0-misc})" disabled></span>
 							<span class="sheet-table-data sheet-center">=</span>
 							<span class="sheet-table-data sheet-center">
@@ -3460,7 +3460,7 @@
 							<span class="sheet-table-header">Misc</span>
 						</div>
 						<div class="sheet-table-row">
-							<span class="sheet-table-data sheet-center"><button style="font-size:100%;" title="%{selected|Concentration-Check-1}" type="roll" value="&{template:pf_check} {{name=Concentration Check}} {{caster_class=@{spellclass-1-name} [[@{spellclass-1-level}]] }} {{concentration_chk=[[1d20 + @{Concentration-1}]] }}" name="roll_Concentration-Check-1">Concentration</button></span>
+							<span class="sheet-table-data sheet-center"><button style="font-size:100%;" title="%{selected|Concentration-Check-1}" type="roll" name="roll_Concentration-Check-1" value="&{template:pf_check} {{name=Concentration Check}} {{caster_class=@{spellclass-1-name} [[@{spellclass-1-level}]] }} {{concentration_chk=[[1d20 + @{Concentration-1}]] }}">Concentration</button></span>
 							<span class="sheet-table-data sheet-center"><input title="@{Concentration-1}" type="number" name="attr_Concentration-1" value="(@{spellclass-1-level} + @{Concentration-1-ability} + @{Concentration-1-misc})" disabled></span>
 							<span class="sheet-table-data sheet-center">=</span>
 							<span class="sheet-table-data sheet-center">
@@ -5628,61 +5628,39 @@ Have questions or feedback? <a href="https://app.roll20.net/forum/post/1047051/p
 </div>
 
 <!-- Roll Templates -->
-<rolltemplate class="sheet-rolltemplate-pf_spell">
-    <table>
-        <tr><th>{{name}}</th></tr>
-        <tr>
-            <td><span class="tcat">School </span>{{school}}; <span class="tcat">Level </span>{{level}}</td>        
-        </tr>
-        <tr>
-            <td><span class="tcat">Casting Time </span>{{casting_time}}</td>        
-        </tr>
-        <tr>
-            <td><span class="tcat">Components </span>{{components}}</td>        
-        </tr>
-        <tr>
-            <td><span class="tcat">Range </span>{{range}}</td>        
-        </tr>
-        <tr>
-            <td><span class="tcat">Effect/Target </span>{{target}}</td>        
-        </tr>
-        <tr>
-            <td><span class="tcat">Duration </span>{{duration}}</td>        
-        </tr>
-        <tr>
-            <td><span class="tcat">Saving Throw </span>{{saving_throw}} <span class="tcat">DC</span>{{dc}}</td>         
-        </tr>
-        <tr>
-            <td><span class="tcat">Spell Resistance </span>{{sr}}</td>        
-        </tr>
-        <tr>
-            {{#rng_attack}}<td><span class="tcat">Ranged Attack </span>{{rng_attack}}</td>{{/rng_attack}}
-        </tr>
-        
-        <tr>
-            {{#mel_attack}}<td><span class="tcat">Melee Attack </span>{{mel_attack}}</td>{{/mel_attack}}
-        </tr>
-        	
-		<tr>
-            {{#damage}}<td><span class="tcat">Damage: </span>{{damage}}</td>{{/damage}}
-        </tr>
-		<tr>
-            <td>{{spell_description}}</td>        
-        </tr>
-    </table>
-  </rolltemplate>
   
-  <rolltemplate class="sheet-rolltemplate-pf_check">
-  	<table>
-    	<tr><th>{{name}}</th></tr>
-    	<tr>
-            {{#caster_class}}<td><span class="tcat">Caster's Class/Lvl: </span>{{caster_class}}</td>{{/caster_class}}
-        </tr>
-        <tr>
-            {{#caster_lvl_chk}}<td><span class="tcat">Caster Level Check: </span>{{caster_lvl_chk}}</td>{{/caster_lvl_chk}}
-        </tr>
-        <tr>
-            {{#concentration_chk}}<td><span class="tcat">Concentration Check: </span>{{concentration_chk}}</td>{{/concentration_chk}}
-        </tr>
-    </table>
-  </rolltemplate>
+<rolltemplate class="sheet-rolltemplate-pf_spell">
+    <div class="sheet-wrapper">
+    	<div>
+            <div class="sheet-header_background"><div class="sheet-header">{{name}}</div></div>
+        	<div class="sheet-content"><span class="tcat">School</span> {{school}}; <span class="tcat">Level </span>{{level}}</div>
+            <div class="sheet-content"><span class="tcat">Casting Time</span> {{casting_time}}</div>
+            <div class="sheet-content"><span class="tcat">Components</span> {{components}}</div>
+            <div class="sheet-content"><span class="tcat">Range</span> {{range}}</div>
+            <div class="sheet-content"><span class="tcat">Effect/Target</span> {{target}}</div>
+            <div class="sheet-content"><span class="tcat">Duration</span> {{duration}}</div>
+            <div class="sheet-content"><span class="tcat">Saving Throw</span> {{saving_throw}} <span class="tcat">DC</span>{{dc}}</div>
+            <div class="sheet-content"><span class="tcat">Spell Resistance</span> {{sr}}</div>
+            {{#rng_attack}}
+            <div class="sheet-content"><span class="tcat">Ranged Attack</span> {{rng_attack}}</div>{{/rng_attack}}
+            {{#mel_attack}}
+            <div class="sheet-content"><span class="tcat">Melee Attack</span> {{mel_attack}}</div>{{/mel_attack}}
+            {{#damage}}
+            <div class="sheet-content"><span class="tcat">Damage:</span> {{damage}}</div>{{/damage}}
+            <div class="sheet-content">{{spell_description}}</div>
+        </div>
+    </div>
+</rolltemplate>
+  
+<rolltemplate class="sheet-rolltemplate-pf_check">
+    <div class="sheet-wrapper">
+        <div class="sheet-header_background"><div class="sheet-header">{{name}}</div></div>
+            <div class="sheet-border">
+    			<div class="sheet-content"><span class="tcat">Caster's Class/Lvl:</span> {{caster_class}}</div>
+            	{{#caster_lvl_chk}}
+            	<div class="sheet-content"><span class="tcat">Caster Level Check:</span> {{caster_lvl_chk}}</div>{{/caster_lvl_chk}}
+            	{{#concentration_chk}}
+            	<div class="sheet-content"><span class="tcat">Concentration Check:</span> {{concentration_chk}}</div>{{/concentration_chk}}
+    		</div>
+    	</div>
+</rolltemplate>

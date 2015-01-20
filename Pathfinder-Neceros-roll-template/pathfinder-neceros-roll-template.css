@@ -226,100 +226,33 @@ textarea {
 
 /*Roll Templates*/
 
-/*Checks*/
-.sheet-rolltemplate-pf_check .sheet-border {
-	border: 2px;
-	border-color: #3F2021;
-	border-radius: 25px;
-}
-
-.sheet-rolltemplate-pf_check table {
-	width: 100%;
-	padding: 2px;
-	background: url(http://i.imgur.com/BLb0XMU.jpg) top left repeat;
-}
- 
-.sheet-rolltemplate-pf_check th {
-	color: rgb(233, 223, 151);
-	background-color: rgb(63, 32, 33);
-	line-height: 1.5em;
-	font-size: 1em;
-	text-align: center;
-	font-family: "Arial", Helvetica, sans-serif;
-}
- 
-.sheet-rolltemplate-pf_check .sheet-arrow-right {
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-	border-left: 180px solid rgb(126, 45, 64);
-}
- 
-.sheet-rolltemplate-pf_check .sheet-tcat {
-	font-weight: bold;
-}
- 
-.sheet-rolltemplate-pf_check td {
-	padding-left: 5px;
-	font-size: 0.9em;
-}
- 
-.sheet-rolltemplate-pf_check .inlinerollresult  {
-    background-color: transparent;
-    border: none;
-}
- 
-.sheet-rolltemplate-pf_check .inlinerollresult.fullcrit {
-	color: #3FB315;
-    border: none;
-}
- 
-.sheet-rolltemplate-pf_check .inlinerollresult.fullfail {
-	color: #B31515;
-    border: none;
-}
- 
-.sheet-rolltemplate-pf_check .inlinerollresult.importantroll {
-	color: #4A57ED;
-    border: none;
-}
-
-
 /*Spells*/
-.sheet-rolltemplate-pf_spell .sheet-border {
-	border: 2px;
-	border-color: #3F2021;
-	border-radius: 25px;
+
+.sheet-rolltemplate-pf_spell .sheet-wrapper {
+	background-color: #FFF;
 }
 
-.sheet-rolltemplate-pf_spell table {
-	width: 100%;
-	padding: 2px;
-	background: url(http://i.imgur.com/BLb0XMU.jpg) top left repeat;
-}
- 
-.sheet-rolltemplate-pf_spell th {
-	color: rgb(233, 223, 151);
-	background-color: rgb(63, 32, 33);
-	padding-left: 10px;
-	line-height: 1.5em;
+.sheet-rolltemplate-pf_spell .sheet-header {
+	color: #fff;
+    padding: 2px 10px 2px 10px;
 	font-size: 1em;
+	font-weight: bold;
 	text-align: left;
-	font-family: "Arial", Helvetica, sans-serif;
+	font-family: 'Lato','Arial', Helvetica, sans-serif;
 	text-transform: uppercase;
+	letter-spacing: 1px;
 }
- 
-.sheet-rolltemplate-pf_spell .sheet-arrow-right {
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-	border-left: 180px solid rgb(126, 45, 64);
+
+.sheet-rolltemplate-pf_spell .sheet-header_background {
+	background-color: #000;
 }
  
 .sheet-rolltemplate-pf_spell .sheet-tcat {
 	font-weight: bold;
 }
  
-.sheet-rolltemplate-pf_spell td {
-	padding-left: 5px;
+.sheet-rolltemplate-pf_spell .sheet-content {
+	padding: 1px 5px 1px 5px;
 	font-size: 0.9em;
 }
  
@@ -339,6 +272,68 @@ textarea {
 }
  
 .sheet-rolltemplate-pf_spell .inlinerollresult.importantroll {
+	color: #4A57ED;
+    border: none;
+}
+
+/*Checks*/
+.sheet-rolltemplate-pf_check .sheet-wrapper {
+	background-color: #FFF;
+}
+
+.sheet-rolltemplate-pf_check .sheet-border {
+	border-color: #000;
+	border-style: solid;
+	border-width: 1px;
+	border-top: hidden;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.sheet-rolltemplate-pf_check .sheet-header {
+	color: #FFF;
+    padding: 2px 10px 2px 10px;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	font-family: 'Lato','Arial', Helvetica, sans-serif;
+	letter-spacing: 1px;
+}
+
+.sheet-rolltemplate-pf_check .sheet-header_background {
+	background-color: #000;
+	background-image: url(https://i.imgur.com/qFsJgts.jpg), url(https://i.imgur.com/0qYWQ2N.jpg);
+	background-position: left, right;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-size: contain;
+}
+
+.sheet-rolltemplate-pf_check .sheet-tcat {
+	font-weight: bold;
+}
+ 
+.sheet-rolltemplate-pf_check .sheet-content {
+	padding: 1px 5px 1px 5px;
+	font-size: 0.9em;
+}
+ 
+.sheet-rolltemplate-pf_check .inlinerollresult  {
+    background-color: transparent;
+    border: none;
+}
+ 
+.sheet-rolltemplate-pf_check .inlinerollresult.fullcrit {
+	color: #3FB315;
+    border: none;
+}
+ 
+.sheet-rolltemplate-pf_check .inlinerollresult.fullfail {
+	color: #B31515;
+    border: none;
+}
+ 
+.sheet-rolltemplate-pf_check .inlinerollresult.importantroll {
 	color: #4A57ED;
     border: none;
 }
